@@ -1,0 +1,37 @@
+REGISTER
+User:
+- Pick time slots, assignments, and time aggressiveness (hours)
+Coordinator:
+- Create time slots, assignments, and time aggressiveness (hours)
+Admin:
+- Create time slots, assignments, and time aggressiveness (hours)
+
+SCHEDULE
+User:
+Coordinator:
+- Start schedule generation
+Admin:
+- "Magic" (determining availability factor vs. demand factor)
+
+ADJUST
+User:
+- View schedule
+Coordinator:
+- Make changes to user schedule.
+- Add shifts?
+Admin:
+- Fix without business logic
+
+PERFORM
+User:
+Coordinator:
+- Check in, check out, break (overlapping)
+Admin:
+- Fix without business logic
+
+REPORT
+User:
+Coordinator:
+- Get reports
+Admin:
+- Adjust perform stage data
