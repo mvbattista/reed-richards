@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'oauth2_provider'
+    'rest_framework.authtoken'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -90,23 +90,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-# For oAuth
-
 # IMPORTANT!
 # Before starting server, run: python3 manage.py syncdb
 # This should set up superuser.
 
-OAUTH2_PROVIDER = {
-    # this is the list of available scopes
-    'SCOPES': ['read', 'write', 'groups']
-}
-
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'oauth2_provider.ext.rest_framework.OAuth2Authentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    )
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
 }
