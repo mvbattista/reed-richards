@@ -11,7 +11,7 @@ $(document).ready(function(){
     else {
       $.ajax({
         type: "POST",
-        url: "login.php",
+        url: "controllers/login.php",
         data: $("#login-form").serialize(),
         success: function(rawData){
           

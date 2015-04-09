@@ -4,7 +4,7 @@ $(document).ready(function(){
 
       $.ajax({
         type: "POST",
-        url: "logout.php",
+        url: "controllers/logout.php",
         success: function(rawData){
           
           if (rawData['code'] === 200) {
