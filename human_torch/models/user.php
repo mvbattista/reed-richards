@@ -36,6 +36,7 @@ class user {
             $response['content'] = array('user_id' => intval($row[0]), 'user_is_admin' => intval($row[1]) );
 
         }
+        mysqli_close($db);
 
         return $response;
 
